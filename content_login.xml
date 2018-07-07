@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.android.sqlitedatabase.LoginActivity"
+    tools:showIn="@layout/activity_login">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter first name"
+        android:id = "@+id/firstname" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstname"
+        android:hint="Enter last name"
+        android:id = "@+id/lastname"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Insert new Field"
+        android:layout_below="@id/lastname"
+        android:onClick="btn_clck"
+        android:id = "@+id/insert"
+        android:layout_marginLeft="100dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/insert"
+        android:text = "update field"
+        android:onClick="btn_clck"
+        android:id = "@+id/update"
+        android:layout_marginLeft="45dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "delete field"
+        android:layout_below="@id/insert"
+        android:layout_toRightOf="@id/update"
+        android:onClick="btn_clck"
+        android:id = "@+id/delete"
+        android:layout_marginLeft="45dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "list all fields"
+        android:onClick="btn_clck"
+        android:layout_marginVertical="10dp"
+        android:paddingRight="40dp"
+        android:layout_below="@id/delete"
+        android:id = "@+id/view"
+        android:layout_marginLeft="90dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "delete all entries"
+        android:layout_below="@id/view"
+        android:onClick="btn_clck"
+        android:id = "@+id/delete_all"
+        android:layout_marginLeft="90dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List will be displayed here"
+        android:layout_marginHorizontal="25dp"
+        android:paddingVertical="25dp"
+        android:layout_below="@id/delete_all"
+        android:id="@+id/textview"/>
+
+
+</RelativeLayout>
+</ScrollView>
